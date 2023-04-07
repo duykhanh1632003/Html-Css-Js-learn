@@ -1,0 +1,251 @@
+html{
+    font-family: 'Cabin', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100%;
+    background-color: rgb(80, 182, 37);
+}
+
+.card{
+    width: 320px;
+    height: 430px;
+    margin: 120px auto;
+    background: rgb(35, 31, 31);
+    border-radius: 10px;
+}
+
+.icon{
+    display: flex;
+   justify-content: space-between;
+   margin: 22px 22px 0 22px;
+   padding-top: 22px;
+}
+
+.cart {
+    font-size: 1.6rem;
+    color: aliceblue;
+    
+}
+
+.heart{
+    font-size: 1.6rem;
+    color: aliceblue;
+}
+
+.card__img{
+    transition: transform 0.5s ease;
+    width: 80%;
+}
+
+.card__img img{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+
+.card:hover .card__img{
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card__tiltle{
+    color: rgb(71, 196, 13);
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.card__price{
+    color: white;   
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 1.4rem;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card__tiltle{
+    transform: translate(-48px ,-50px );
+}
+
+.card:hover .card__price{
+    transform: translate(-116px , -50px);
+}
+
+.card__size{
+    
+    display: none;
+}
+
+.card__size h3{
+    font-size: 1.4rem;
+    color: aliceblue;
+    padding-top: 6px;
+    margin-left:20px ;
+    margin-right: 9px;
+}
+
+.card__size span{
+    background-color: rgb(213, 222, 230);
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.color{
+    display: none;
+    color: white;
+    margin-left: 21px;
+    margin-right: 10px; 
+}
+
+.card__color{    
+    margin-top: 10px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center; /* thêm thuộc tính này để căn giữa các span */
+    text-align: center;
+    }
+    
+.green{
+    display: none;
+}
+    
+.red{
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 10px;
+}
+    
+.blue{
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 0; /* xóa margin-right của blue */
+}
+.card__action {
+    display: none;
+    margin-left: 21px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card__action button{
+    display: none;
+    background-color: rgb(65, 194, 58);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: aliceblue;
+    border: none;
+    margin-right: 8px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card__action:hover button {
+    transform: scale(0.8);
+    
+  }
+
+
+.card:hover .card__size {
+    display: flex;
+    flex-direction: row;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+
+.card:hover .green{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 10px;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+
+.card:hover .red{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 10px;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+
+.card:hover .blue{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue;
+    margin-right: 10px;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+
+.card:hover .color{
+    display: block;
+    color: white;
+    margin-left: 21px;
+    margin-right: 10px; 
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+.card:hover .card__action {
+    display: flex;
+    margin-left: 21px;
+    margin-top: 10px;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+
+.card:hover .card__action button{
+    display: block;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode:forwards ;
+}
+
+@keyframes slide-up{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

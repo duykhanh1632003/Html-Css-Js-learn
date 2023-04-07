@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<title>Gửi email</title>
+<link rel="stylesheet" href="sendemail.css">
+
+</script>
+  </head>
+  <body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Nhập vào đây lời muốn nói</h3>
+            <input type="text" id="name" placeholder="Họ tên" required>
+            <input type="email" id="email" placeholder="Địa chỉ Email" required>
+            <input type="text" id="phone" placeholder="Số điện thoại" required>            
+            <textarea type="text" id="message" placeholder="Tôi có thể giúp gì"></textarea>
+            <button type="submit">Gửi</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script><script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+                function sendEmail(){
+                    Email.send({
+            secureToken: "0062e85b-8104-4a70-b7b3-d6502cb0bd12",
+            Host : "smtp.elasticemail.com",
+            Username : "duykhanh1632003@gmail.com",
+            Password : "82528FB09D777D74907F272C27772DFBFD3B",
+            To : 'khanhnthdz@gmail.com',
+            From :document.getElementById("email").value,
+            Subject : "Nhập dữ liệu",
+            Body : "Name:" + document.getElementById("name").value
+            +"<br> Email: "+ document.getElementById("email").value
+            +"<br> Số điện thoại: "+ document.getElementById("phone").value
+            +"<br> Message: "+ document.getElementById("message").value
+        }).then(
+            message => alert("Đã gửi thành công")
+        );
+    }
+    </script>
+  </body>
+</html>

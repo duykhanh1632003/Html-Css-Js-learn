@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài tỏ tình</title>
+	<style>
+		/* CSS code */
+	</style>
+	<script>
+		function createNewPage() {
+			// code sẽ được thêm ở bước 2
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<label for="name">Nhập tên của bạn:</label>
+		<input type="text" id="name" name="name" required>
+		<button type="button" onclick="createNewPage()">Gửi</button>
+	</form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trái tim đập thình thịch</title>
+	<style>
+		body {
+			background-color: #ffcccc;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		#heart {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 200px;
+			height: 200px;
+			background-image: url('https://i.imgur.com/yjPZuM7.gif');
+			background-size: contain;
+			background-repeat: no-repeat;
+			animation: heartbeat 1s infinite linear;
+		}
+
+		@keyframes heartbeat {
+			0% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.2);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="heart"></div>
+
+	<script>
+		function resizeWindow() {
+			window.resizeTo(screen.width, screen.height);
+		}
+
+		resizeWindow();
+	</script>
+</body>
+</html>
